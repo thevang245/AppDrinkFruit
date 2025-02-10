@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <!-- Ảnh sản phẩm -->
+            <ImageView
+                android:id="@+id/gg_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="Product Image"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/rmnc"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Nhãn dán giảm giá -->
+            <TextView
+                android:id="@+id/discount_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="-20%"
+                android:textColor="@color/yellow"
+                android:textSize="17dp"
+                android:background="@color/red"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/gg_img"
+                app:layout_constraintEnd_toEndOf="@+id/gg_img"
+               />
+
+            <ImageView
+                android:id="@+id/img_Favorite"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:padding="6dp"
+                app:srcCompat="@drawable/baseline_favorite_border_24"
+                app:tint="@color/red"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Tên sản phẩm -->
+            <TextView
+                android:id="@+id/gg_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Tên sản phẩm"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/gg_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Giá sản phẩm -->
+
+            <TextView
+                android:id="@+id/tvgiagoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.000 VND"
+                android:textAlignment="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18dp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toStartOf="@+id/tvgiamoi"
+                app:layout_constraintHorizontal_bias="0.864"
+                app:layout_constraintStart_toStartOf="@+id/gg_title"
+                app:layout_constraintTop_toBottomOf="@+id/gg_title" />
+
+            <TextView
+                android:id="@+id/tvgiamoi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="12.000 VND"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvgiagoc"
+                app:layout_constraintEnd_toEndOf="@+id/gg_title"
+                app:layout_constraintTop_toBottomOf="@+id/gg_title"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
